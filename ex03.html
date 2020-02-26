@@ -12,8 +12,19 @@
         // 3 types of Boolean operators &&, ||, !
 
         var tookShower = true;
-        var hasShoes = false;
+        var hasShoes = true;
+
+        console.log(tookShower && hasShoes);
         
+        var ateApple = true, ateOrange = false;
+        console.log(ateApple || ateOrange);
+
+        var isWeekend = true, needShower = !isWeekend;
+        console.log(needShower);
+
+        var weekend = false, hadShower = true, hadApple = false, hadOrange = true;
+        var shouldIGoToSchoolToday = !weekend && hadShower &&(hadApple || hadOrange);
+        console.log("Should I go to school today: " + shouldIGoToSchoolToday);
     </script>
 </head>
 <body>
