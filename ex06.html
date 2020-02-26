@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 06 Arrays</title>
+    <script>
+        //Arrays
+        var animals = [];
+        animals.push('cat');
+        animals.push('dogs');
+        animals.push('llama','monkey');
+
+
+        //add to beginning of array
+        animals.unshift('bird');
+
+        console.log(animals);
+
+        //remove from array
+
+        var lastAnimal = animals.pop();
+        console.log(lastAnimal);
+
+        animals.pop();
+        animals.unshift(lastAnimal);
+
+        // remove an item from the beginning of an array
+        var firstAnimal = animals.shift();
+        console.log(animals, firstAnimal);
+
+    </script>
+</head>
+<body>
+    <h1>Hello</h1>
+</body>
+</html>
