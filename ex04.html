@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript 04 Comparisons</title>
+    <script>
+        //Number game...
+        var secretNum = Math.floor(Math.random() * 9 + 1);
+        var hint = " ";
+        var guess = null;
+        function guessNumber() {
+            if (guess != null) {
+                var yourGuess = prompt("Please guess my number between 1 and 0, " + hint + guess);
+            } else {
+                var yourGuess = prompt("Please guess my number between 1 and 0");
+            }
+            if (yourGuess != null) {
+                if (secretNum == yourGuess) {
+                        console.log("You guessed right my number is " + secretNum);
+                    } else {
+                        console.log("BRRR wrong answer!");
+                        if (yourGuess < secretNum) {
+                            hint = "Try again the number is higher than ";
+                            guess = yourGuess;
+                            guessNumber();
+                        } else {
+                            hint = "Try again the number is lower than ";
+                            guess = yourGuess;
+                            guessNumber();
+                        }
+                    }
+            } else {
+                yourGuess = prompt("Please guess my number between 1 and 9");
+            }
+        }
+        guessNumber();
+        // var yourGuess = 3;
+        // console.log(secretNum == yourGuess);
+
+        // var secretNum2 = 7;
+        // var yourGuess2 = 5;
+        // console.log(secretNum2 === yourGuess2);
+    </script>
+</head>
+<body>
+    <h1>Hello, Great job playing my number game</h1>
+</body>
+</html>
